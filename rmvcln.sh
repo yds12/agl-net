@@ -1,0 +1,2 @@
+../remove.sh
+make clean

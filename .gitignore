@@ -1,0 +1,8 @@
+deb/usr/*
+lib/*
+release/*
+rpm/*
+src/*.cbp
+src/*.layout
+src/*.o
+src/doxyfile
