@@ -1,5 +1,5 @@
 deb/usr/*
-lib/*
+lib/*.so
 release/*
 rpm/*
 src/*.cbp

@@ -1,13 +1,22 @@
 # Makefile
 
 # Build the AGL library
-agl: net.cpp net.h
+release: net.cpp net.h
+	g++ -fPIC -c net.cpp
+	g++ -shared -o ../lib/libagl-net.so net.o -lSDL -lSDL_net -lagl
+
+# Build the AGL library
+debug: net.cpp net.h
 	g++ -fPIC -c net.cpp
 	g++ -shared -o ../lib/libagl-net.so net.o -lSDL -lSDL_net -lagl
 
 # Build the test application
 test: test.cpp
 	g++ -g -o test test.cpp -lagl -lagl-net
+
+# Install the AGL library (debug) on the system
+install_debug:
+	../install_debug.sh
 
 # Install the AGL library on the system
 install:
